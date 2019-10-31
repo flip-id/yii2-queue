@@ -15,9 +15,9 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/yiisoft/yii2-queue/issues",
-        "source": "https://github.com/yiisoft/yii2-queue",
-        "docs": "https://github.com/yiisoft/yii2-queue/blob/master/docs/guide"
+        "issues": "https://github.com/flip-id/yii2-redis-queue-enhanced/issues",
+        "source": "https://github.com/flip-id/yii2-redis-queue-enhanced",
+        "docs": "https://github.com/flip-id/yii2-redis-queue-enhanced/blob/master/docs/guide"
     },
     "require": {
         "php": ">=5.5.0",

@@ -187,7 +187,8 @@ class Queue extends CliQueue
             throw new NotSupportedException('Job priority is not supported in the driver.');
         }
 
-        $id = uniqid('', true);
+        $id = uniqid("{$this->channel}.", true);
+        $this->redis->incr("{$this->channel}.total");
         $this->redis->hset("$this->channel.messages", $id, "$ttr;$message");
         if (!$delay) {
             $this->redis->lpush("$this->channel.waiting", $id);

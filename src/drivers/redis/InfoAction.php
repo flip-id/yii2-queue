@@ -32,7 +32,7 @@ class InfoAction extends Action
         $waiting = $this->queue->redis->llen("$prefix.waiting");
         $delayed = $this->queue->redis->zcount("$prefix.delayed", '-inf', '+inf');
         $reserved = $this->queue->redis->zcount("$prefix.reserved", '-inf', '+inf');
-        $total = $this->queue->redis->get("$prefix.message_id");
+        $total = $this->queue->redis->get("$prefix.total");
         $done = $total - $waiting - $delayed - $reserved;
 
         Console::output($this->format('Jobs', Console::FG_GREEN));

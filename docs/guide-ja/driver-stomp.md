@@ -1,21 +1,21 @@
-Stomp ƒhƒ‰ƒCƒo
+Stomp ï¿½hï¿½ï¿½ï¿½Cï¿½o
 ==============
 
 
-‚±‚Ìƒhƒ‰ƒCƒo‚Í ActiveMQ ƒLƒ…[‚Å“®ì‚µ‚Ü‚·B
+ï¿½ï¿½ï¿½Ìƒhï¿½ï¿½ï¿½Cï¿½oï¿½ï¿½ ActiveMQ ï¿½Lï¿½ï¿½ï¿½[ï¿½Å“ï¿½ï¿½ì‚µï¿½Ü‚ï¿½ï¿½B
 
-`enqueue/stomp` ƒpƒbƒP[ƒW‚ð•K—v‚Æ‚µ‚Ü‚·B
+`enqueue/stomp` ï¿½pï¿½bï¿½Pï¿½[ï¿½Wï¿½ï¿½Kï¿½vï¿½Æ‚ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-\¬—á:
+ï¿½\ï¿½ï¿½ï¿½ï¿½:
 
 ```php
 return [
     'bootstrap' => [
-        'queue', // ƒRƒ“ƒ|[ƒlƒ“ƒg‚ªŽ©g‚ÌƒRƒ“ƒ\[ƒ‹EƒRƒ}ƒ“ƒh‚ð“o˜^‚µ‚Ü‚·
+        'queue', // ï¿½Rï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ÌƒRï¿½ï¿½ï¿½\ï¿½[ï¿½ï¿½ï¿½Eï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½oï¿½^ï¿½ï¿½ï¿½Ü‚ï¿½
     ],
     'components' => [
         'queue' => [
-            'class' => \yii\queue\stomp\Queue::class,
+            'class' => \flip_id\yii2_queue\stomp\Queue::class,
             'host' => 'localhost',
             'port' => 61613,
             'queueName' => 'queue',
@@ -24,16 +24,16 @@ return [
 ];
 ```
 
-ƒRƒ“ƒ\[ƒ‹
+ï¿½Rï¿½ï¿½ï¿½\ï¿½[ï¿½ï¿½
 ----------
 
-ƒLƒ…[‚É“ü‚ê‚ç‚ê‚½ƒWƒ‡ƒu‚ðŽÀs‚·‚é‚½‚ß‚ÉƒRƒ“ƒ\[ƒ‹EƒRƒ}ƒ“ƒh‚ªŽg—p‚³‚ê‚Ü‚·B
+ï¿½Lï¿½ï¿½ï¿½[ï¿½É“ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½Wï¿½ï¿½ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½é‚½ï¿½ß‚ÉƒRï¿½ï¿½ï¿½\ï¿½[ï¿½ï¿½ï¿½Eï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
 ```sh
 yii queue/listen [timeout]
 ```
 
-`listen` ƒRƒ}ƒ“ƒh‚Í–³ŒÀ‚ÉƒLƒ…[‚ð’²‚×‘±‚¯‚éƒf[ƒ‚ƒ“‚ð‹N“®‚µ‚Ü‚·BƒLƒ…[‚ÉV‚µ‚¢ƒ^ƒXƒN‚ª‚ ‚é‚ÆA‘¦À‚ÉŽæ“¾‚³‚êAŽÀs‚³‚ê‚Ü‚·B
-`timeout` ƒpƒ‰ƒ[ƒ^‚ÍƒLƒ…[‚ð’²‚×‚éŠÔ‚ÌƒXƒŠ[ƒv‚Ì•b”‚ðŽw’è‚·‚é‚à‚Ì‚Å‚·B
-‚±‚ÌƒRƒ}ƒ“ƒh‚ð [supervisor](worker.md#supervisor) ‚Ü‚½‚Í [systemd](worker.md#systemd) ‚É‚æ‚Á‚Ä“KØ‚Éƒf[ƒ‚ƒ“‰»‚·‚é‚Ì‚ªA
-Å‚àŒø—¦“I‚È•û–@‚Å‚·B
+`listen` ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½Í–ï¿½ï¿½ï¿½ï¿½ÉƒLï¿½ï¿½ï¿½[ï¿½ð’²‚×‘ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Lï¿½ï¿½ï¿½[ï¿½ÉVï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÆAï¿½ï¿½ï¿½ï¿½ï¿½ÉŽæ“¾ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+`timeout` ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ÍƒLï¿½ï¿½ï¿½[ï¿½ð’²‚×‚ï¿½Ô‚ÌƒXï¿½ï¿½ï¿½[ï¿½vï¿½Ì•bï¿½ï¿½ï¿½ï¿½ï¿½wï¿½è‚·ï¿½ï¿½ï¿½ï¿½Ì‚Å‚ï¿½ï¿½B
+ï¿½ï¿½ï¿½ÌƒRï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½ [supervisor](worker.md#supervisor) ï¿½Ü‚ï¿½ï¿½ï¿½ [systemd](worker.md#systemd) ï¿½É‚ï¿½ï¿½ï¿½Ä“Kï¿½Ø‚Éƒfï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½A
+ï¿½Å‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Iï¿½È•ï¿½ï¿½@ï¿½Å‚ï¿½ï¿½B

@@ -5,13 +5,13 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\sqs;
+namespace flip_id\yii2_queue\sqs;
 
 use Aws\Credentials\CredentialProvider;
 use Aws\Sqs\SqsClient;
 use yii\base\NotSupportedException;
-use yii\queue\cli\Queue as CliQueue;
-use yii\queue\serializers\JsonSerializer;
+use flip_id\yii2_queue\cli\Queue as CliQueue;
+use flip_id\yii2_queue\serializers\JsonSerializer;
 
 /**
  * SQS Queue.

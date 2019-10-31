@@ -5,9 +5,9 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\gearman;
+namespace flip_id\yii2_queue\gearman;
 
-use yii\queue\cli\Command as CliCommand;
+use flip_id\yii2_queue\cli\Command as CliCommand;
 
 /**
  * Manages application gearman-queue.

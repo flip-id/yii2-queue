@@ -7,7 +7,7 @@
 
 namespace tests\serializers;
 
-use yii\queue\serializers\JsonSerializer;
+use flip_id\yii2_queue\serializers\JsonSerializer;
 
 /**
  * Json Serializer Test.

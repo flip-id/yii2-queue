@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\serializers;
+namespace flip_id\yii2_queue\serializers;
 
 use Yii;
 use yii\base\BaseObject;

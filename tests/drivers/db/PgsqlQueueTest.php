@@ -8,7 +8,7 @@
 namespace tests\drivers\db;
 
 use Yii;
-use yii\queue\db\Queue;
+use flip_id\yii2_queue\db\Queue;
 
 /**
  * Postgres Queue Test.

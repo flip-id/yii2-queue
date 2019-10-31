@@ -5,9 +5,9 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\serializers;
+namespace flip_id\yii2_queue\serializers;
 
-use yii\queue\JobInterface;
+use flip_id\yii2_queue\JobInterface;
 
 /**
  * Serializer Interface.

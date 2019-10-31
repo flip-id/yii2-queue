@@ -5,15 +5,15 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\debug;
+namespace flip_id\yii2_queue\debug;
 
 use Yii;
 use yii\base\NotSupportedException;
 use yii\base\ViewContextInterface;
 use yii\helpers\VarDumper;
-use yii\queue\JobInterface;
-use yii\queue\PushEvent;
-use yii\queue\Queue;
+use flip_id\yii2_queue\JobInterface;
+use flip_id\yii2_queue\PushEvent;
+use flip_id\yii2_queue\Queue;
 
 /**
  * Debug Panel.

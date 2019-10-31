@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\stomp;
+namespace flip_id\yii2_queue\stomp;
 
 use Enqueue\Stomp\StompConnectionFactory;
 use Enqueue\Stomp\StompContext;
@@ -13,7 +13,7 @@ use Enqueue\Stomp\StompMessage;
 use yii\base\Application as BaseApp;
 use yii\base\Event;
 use yii\base\NotSupportedException;
-use yii\queue\cli\Queue as CliQueue;
+use flip_id\yii2_queue\cli\Queue as CliQueue;
 
 /**
  * Stomp Queue.

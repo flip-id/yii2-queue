@@ -5,14 +5,14 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\beanstalk;
+namespace flip_id\yii2_queue\beanstalk;
 
 use Pheanstalk\Exception\ServerException;
 use Pheanstalk\Job;
 use Pheanstalk\Pheanstalk;
 use Pheanstalk\PheanstalkInterface;
 use yii\base\InvalidArgumentException;
-use yii\queue\cli\Queue as CliQueue;
+use flip_id\yii2_queue\cli\Queue as CliQueue;
 
 /**
  * Beanstalk Queue.

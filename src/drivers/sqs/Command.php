@@ -5,10 +5,10 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\sqs;
+namespace flip_id\yii2_queue\sqs;
 
 use yii\console\Exception;
-use yii\queue\cli\Command as CliCommand;
+use flip_id\yii2_queue\cli\Command as CliCommand;
 
 /**
  * Manages application aws sqs-queue.

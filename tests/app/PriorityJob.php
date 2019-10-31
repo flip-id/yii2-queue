@@ -9,7 +9,7 @@ namespace tests\app;
 
 use Yii;
 use yii\base\BaseObject;
-use yii\queue\JobInterface;
+use flip_id\yii2_queue\JobInterface;
 
 /**
  * Priority Job.

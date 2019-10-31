@@ -23,7 +23,7 @@ return [
             // ...
         ],
         'queue' => [
-            'class' => \yii\queue\db\Queue::class,
+            'class' => \flip_id\yii2_queue\db\Queue::class,
             'db' => 'db', // DB connection component or its config 
             'tableName' => '{{%queue}}', // Table name
             'channel' => 'default', // Queue channel key

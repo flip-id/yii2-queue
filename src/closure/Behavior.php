@@ -5,11 +5,11 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\closure;
+namespace flip_id\yii2_queue\closure;
 
 use SuperClosure\Serializer;
-use yii\queue\PushEvent;
-use yii\queue\Queue;
+use flip_id\yii2_queue\PushEvent;
+use flip_id\yii2_queue\Queue;
 
 /**
  * Closure Behavior.

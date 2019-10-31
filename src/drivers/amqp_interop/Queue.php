@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\amqp_interop;
+namespace flip_id\yii2_queue\amqp_interop;
 
 use Enqueue\AmqpBunny\AmqpConnectionFactory as AmqpBunnyConnectionFactory;
 use Enqueue\AmqpExt\AmqpConnectionFactory as AmqpExtConnectionFactory;
@@ -22,7 +22,7 @@ use Interop\Amqp\Impl\AmqpBind;
 use yii\base\Application as BaseApp;
 use yii\base\Event;
 use yii\base\NotSupportedException;
-use yii\queue\cli\Queue as CliQueue;
+use flip_id\yii2_queue\cli\Queue as CliQueue;
 
 /**
  * Amqp Queue.

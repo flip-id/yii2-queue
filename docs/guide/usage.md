@@ -14,8 +14,8 @@ return [
     ],
     'components' => [
         'queue' => [
-            'class' => \yii\queue\<driver>\Queue::class,
-            'as log' => \yii\queue\LogBehavior::class,
+            'class' => \flip_id\yii2_queue\<driver>\Queue::class,
+            'as log' => \flip_id\yii2_queue\LogBehavior::class,
             // Other driver options
         ],
     ],
@@ -32,7 +32,7 @@ Each task which is sent to the queue should be defined as a separate class.
 For example, if you need to download and save a file the class may look like the following:
 
 ```php
-class DownloadJob extends BaseObject implements \yii\queue\JobInterface
+class DownloadJob extends BaseObject implements \flip_id\yii2_queue\JobInterface
 {
     public $url;
     public $file;
@@ -127,9 +127,9 @@ For example to serialize to JSON:
 return [
     'components' => [
         'queue' => [
-            'class' => \yii\queue\<driver>\Queue::class,
+            'class' => \flip_id\yii2_queue\<driver>\Queue::class,
             'strictJobType' => false,
-            'serializer' => \yii\queue\serializers\JsonSerializer::class,
+            'serializer' => \flip_id\yii2_queue\serializers\JsonSerializer::class,
         ],
     ],
 ];
@@ -175,8 +175,8 @@ To enable it, simply configure the queue component as follows:
 return [
     'components' => [
         'queue' => [
-            'class' => \yii\queue\redis\Queue::class,
-            'as log' => \yii\queue\LogBehavior::class
+            'class' => \flip_id\yii2_queue\redis\Queue::class,
+            'as log' => \flip_id\yii2_queue\LogBehavior::class
         ],
     ],
 ];
@@ -196,12 +196,12 @@ return [
     ],
     'components' => [
         'queue1' => [
-            'class' => \yii\queue\redis\Queue::class,
+            'class' => \flip_id\yii2_queue\redis\Queue::class,
         ],
         'queue2' => [
-            'class' => \yii\queue\db\Queue::class,
+            'class' => \flip_id\yii2_queue\db\Queue::class,
             'strictJobType' => false,
-            'serializer' => \yii\queue\serializers\JsonSerializer::class,
+            'serializer' => \flip_id\yii2_queue\serializers\JsonSerializer::class,
         ],
     ],
 ];
@@ -250,7 +250,7 @@ Yii::$app->queue->push(new SomeJob([
 Task class:
 
 ```php
-class SomeJob extends BaseObject implements \yii\queue\JobInterface
+class SomeJob extends BaseObject implements \flip_id\yii2_queue\JobInterface
 {
     public $userId;
     public $bookId;

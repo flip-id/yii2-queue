@@ -11,7 +11,7 @@ use Symfony\Component\Process\Process;
 use Yii;
 use yii\console\Exception as ConsoleException;
 use yii\helpers\Console;
-use yii\queue\Queue;
+use flip_id\yii2_queue\Queue;
 
 /**
  * Benchmark of job wait time.

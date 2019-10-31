@@ -9,7 +9,7 @@ namespace tests\drivers;
 
 use Yii;
 use tests\app\SimpleJob;
-use yii\queue\Queue;
+use flip_id\yii2_queue\Queue;
 
 /**
  * Driver Test Case.

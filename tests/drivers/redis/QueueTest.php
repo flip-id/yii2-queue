@@ -10,7 +10,7 @@ namespace tests\drivers\redis;
 use tests\app\RetryJob;
 use tests\drivers\CliTestCase;
 use Yii;
-use yii\queue\redis\Queue;
+use flip_id\yii2_queue\redis\Queue;
 
 /**
  * Redis Queue Test.

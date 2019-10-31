@@ -5,12 +5,12 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\redis;
+namespace flip_id\yii2_queue\redis;
 
 use yii\base\InvalidArgumentException;
 use yii\base\NotSupportedException;
 use yii\di\Instance;
-use yii\queue\cli\Queue as CliQueue;
+use flip_id\yii2_queue\cli\Queue as CliQueue;
 use yii\redis\Connection;
 
 /**

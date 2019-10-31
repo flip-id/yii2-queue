@@ -86,10 +86,10 @@ Upgrade from 0.10.1
   Instead of the old variant:
 
   ```php
-  'queue' => [
+    'queue' => [
       'class' => \zhuravljov\yii\queue\Queue::class,
       'driver' => [
-          'class' => \yii\queue\db\Driver::class,
+          'class' => \flip_id\yii2_queue\db\Driver::class,
           'db' => 'db',
           'tableName' => '{{%queue}}'
           'channel' => 'default',

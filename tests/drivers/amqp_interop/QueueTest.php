@@ -11,7 +11,7 @@ use tests\app\PriorityJob;
 use tests\app\RetryJob;
 use tests\drivers\CliTestCase;
 use Yii;
-use yii\queue\amqp_interop\Queue;
+use flip_id\yii2_queue\amqp_interop\Queue;
 
 /**
  * AMQP Queue Test.
@@ -75,7 +75,7 @@ class QueueTest extends CliTestCase
         if ('true' == getenv('EXCLUDE_AMQP_INTEROP')) {
             $this->markTestSkipped('Amqp tests are disabled for php 5.5');
         }
-        
+
         parent::setUp();
     }
 }

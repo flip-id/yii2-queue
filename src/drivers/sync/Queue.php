@@ -5,12 +5,12 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\sync;
+namespace flip_id\yii2_queue\sync;
 
 use Yii;
 use yii\base\Application;
 use yii\base\InvalidArgumentException;
-use yii\queue\Queue as BaseQueue;
+use flip_id\yii2_queue\Queue as BaseQueue;
 
 /**
  * Sync Queue.

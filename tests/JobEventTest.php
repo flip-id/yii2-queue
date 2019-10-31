@@ -7,12 +7,12 @@
 
 namespace tests;
 
-use yii\queue\closure\Behavior as ClosureBehavior;
-use yii\queue\ExecEvent;
-use yii\queue\InvalidJobException;
-use yii\queue\JobEvent;
-use yii\queue\Queue;
-use yii\queue\sync\Queue as SyncQueue;
+use flip_id\yii2_queue\closure\Behavior as ClosureBehavior;
+use flip_id\yii2_queue\ExecEvent;
+use flip_id\yii2_queue\InvalidJobException;
+use flip_id\yii2_queue\JobEvent;
+use flip_id\yii2_queue\Queue;
+use flip_id\yii2_queue\sync\Queue as SyncQueue;
 
 /**
  * Job Event Test

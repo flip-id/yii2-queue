@@ -5,14 +5,14 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\file;
+namespace flip_id\yii2_queue\file;
 
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\base\InvalidConfigException;
 use yii\base\NotSupportedException;
 use yii\helpers\FileHelper;
-use yii\queue\cli\Queue as CliQueue;
+use flip_id\yii2_queue\cli\Queue as CliQueue;
 
 /**
  * File Queue.

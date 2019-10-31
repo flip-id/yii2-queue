@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\cli;
+namespace flip_id\yii2_queue\cli;
 
 use yii\base\Event;
 

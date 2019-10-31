@@ -14,7 +14,7 @@ return [
     ],
     'components' => [
         'queue' => [
-            'class' => \yii\queue\stomp\Queue::class,
+            'class' => \flip_id\yii2_queue\stomp\Queue::class,
             'host' => 'localhost',
             'port' => 61613,
             'queueName' => 'queue',

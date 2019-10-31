@@ -14,7 +14,7 @@ return [
     ],
     'components' => [
         'queue' => [
-            'class' => \yii\queue\sqs\Queue::class,
+            'class' => \flip_id\yii2_queue\sqs\Queue::class,
             'url' => '<sqs url>',
             'key' => '<key>',
             'secret' => '<secret>',

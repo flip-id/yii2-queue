@@ -17,7 +17,7 @@
 ```php
 'components' => [
     'queue' => [
-        'class' => \yii\queue\<driver>\Queue::class,
+        'class' => \flip_id\yii2_queue\<driver>\Queue::class,
         'ttr' => 5 * 60, // Максимальное время выполнения задания 
         'attempts' => 3, // Максимальное кол-во попыток
     ],

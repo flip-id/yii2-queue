@@ -5,13 +5,13 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\cli;
+namespace flip_id\yii2_queue\cli;
 
 use yii\base\Behavior;
 use yii\console\Controller;
 use yii\helpers\Console;
-use yii\queue\ExecEvent;
-use yii\queue\JobInterface;
+use flip_id\yii2_queue\ExecEvent;
+use flip_id\yii2_queue\JobInterface;
 
 /**
  * Verbose Behavior.

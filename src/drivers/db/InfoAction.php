@@ -5,11 +5,11 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\db;
+namespace flip_id\yii2_queue\db;
 
 use yii\db\Query;
 use yii\helpers\Console;
-use yii\queue\cli\Action;
+use flip_id\yii2_queue\cli\Action;
 
 /**
  * Info about queue status.

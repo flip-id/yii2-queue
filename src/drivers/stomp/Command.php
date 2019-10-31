@@ -5,10 +5,10 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\stomp;
+namespace flip_id\yii2_queue\stomp;
 
 use yii\console\Exception;
-use yii\queue\cli\Command as CliCommand;
+use flip_id\yii2_queue\cli\Command as CliCommand;
 
 /**
  * Manages application stomp-queue.

@@ -5,10 +5,10 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\beanstalk;
+namespace flip_id\yii2_queue\beanstalk;
 
 use yii\helpers\Console;
-use yii\queue\cli\Action;
+use flip_id\yii2_queue\cli\Action;
 
 /**
  * Info about queue status.

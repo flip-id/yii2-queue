@@ -11,7 +11,7 @@ use tests\app\PriorityJob;
 use tests\app\RetryJob;
 use tests\drivers\CliTestCase;
 use Yii;
-use yii\queue\stomp\Queue;
+use flip_id\yii2_queue\stomp\Queue;
 
 
 class QueueTest extends CliTestCase

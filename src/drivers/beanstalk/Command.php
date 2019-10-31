@@ -5,10 +5,10 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\beanstalk;
+namespace flip_id\yii2_queue\beanstalk;
 
 use yii\console\Exception;
-use yii\queue\cli\Command as CliCommand;
+use flip_id\yii2_queue\cli\Command as CliCommand;
 
 /**
  * Manages application beanstalk-queue.

@@ -17,7 +17,7 @@ return [
     ],
     'components' => [
         'queue' => [
-            'class' => \yii\queue\amqp\Queue::class,
+            'class' => \flip_id\yii2_queue\amqp\Queue::class,
             'host' => 'localhost',
             'port' => 5672,
             'user' => 'guest',

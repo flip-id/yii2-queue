@@ -7,7 +7,7 @@
 
 namespace tests\serializers;
 
-use yii\queue\serializers\PhpSerializer;
+use flip_id\yii2_queue\serializers\PhpSerializer;
 
 /**
  * PHP Serializer Test.

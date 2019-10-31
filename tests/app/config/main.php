@@ -17,10 +17,10 @@ $config = [
     ],
     'components' => [
         'syncQueue' => [
-            'class' => \yii\queue\sync\Queue::class,
+            'class' => \flip_id\yii2_queue\sync\Queue::class,
         ],
         'fileQueue' => [
-            'class' => \yii\queue\file\Queue::class,
+            'class' => \flip_id\yii2_queue\file\Queue::class,
         ],
         'mysql' => [
             'class' => \yii\db\Connection::class,
@@ -37,7 +37,7 @@ $config = [
             ],
         ],
         'mysqlQueue' => [
-            'class' => \yii\queue\db\Queue::class,
+            'class' => \flip_id\yii2_queue\db\Queue::class,
             'db' => 'mysql',
             'mutex' => [
                 'class' => \yii\mutex\MysqlMutex::class,
@@ -49,7 +49,7 @@ $config = [
             'dsn' => 'sqlite:@runtime/yii2_queue_test.db',
         ],
         'sqliteQueue' => [
-            'class' => \yii\queue\db\Queue::class,
+            'class' => \flip_id\yii2_queue\db\Queue::class,
             'db' => 'sqlite',
             'mutex' => \yii\mutex\FileMutex::class,
         ],
@@ -65,7 +65,7 @@ $config = [
             'charset' => 'utf8',
         ],
         'pgsqlQueue' => [
-            'class' => \yii\queue\db\Queue::class,
+            'class' => \flip_id\yii2_queue\db\Queue::class,
             'db' => 'pgsql',
             'mutex' => [
                 'class' => \yii\mutex\PgsqlMutex::class,
@@ -79,10 +79,10 @@ $config = [
             'database' => getenv('REDIS_DB') ?: 1,
         ],
         'redisQueue' => [
-            'class' => \yii\queue\redis\Queue::class,
+            'class' => \flip_id\yii2_queue\redis\Queue::class,
         ],
         'amqpQueue' => [
-            'class' => \yii\queue\amqp\Queue::class,
+            'class' => \flip_id\yii2_queue\amqp\Queue::class,
             'host' => getenv('RABBITMQ_HOST') ?: 'localhost',
             'user' => getenv('RABBITMQ_USER') ?: 'guest',
             'password' => getenv('RABBITMQ_PASSWORD') ?: 'guest',
@@ -90,7 +90,7 @@ $config = [
             'exchangeName' => 'exchange-basic',
         ],
         'amqpInteropQueue' => [
-            'class' => \yii\queue\amqp_interop\Queue::class,
+            'class' => \flip_id\yii2_queue\amqp_interop\Queue::class,
             'host' => getenv('RABBITMQ_HOST') ?: 'localhost',
             'user' => getenv('RABBITMQ_USER') ?: 'guest',
             'password' => getenv('RABBITMQ_PASSWORD') ?: 'guest',
@@ -98,11 +98,11 @@ $config = [
             'exchangeName' => 'exchange-interop',
         ],
         'beanstalkQueue' => [
-            'class' => \yii\queue\beanstalk\Queue::class,
+            'class' => \flip_id\yii2_queue\beanstalk\Queue::class,
             'host' => getenv('BEANSTALK_HOST') ?: 'localhost',
         ],
         'stompQueue' => [
-            'class' => \yii\queue\stomp\Queue::class,
+            'class' => \flip_id\yii2_queue\stomp\Queue::class,
             'host' => getenv('ACTIVEMQ_HOST') ?: 'localhost',
         ],
     ],
@@ -111,7 +111,7 @@ $config = [
 if (defined('GEARMAN_SUCCESS')) {
     $config['bootstrap'][] = 'gearmanQueue';
     $config['components']['gearmanQueue'] = [
-        'class' => \yii\queue\gearman\Queue::class,
+        'class' => \flip_id\yii2_queue\gearman\Queue::class,
         'host' => getenv('GEARMAN_HOST') ?: 'localhost',
     ];
 }
@@ -119,7 +119,7 @@ if (defined('GEARMAN_SUCCESS')) {
 if (getenv('AWS_SQS_ENABLED')) {
     $config['bootstrap'][] = 'sqsQueue';
     $config['components']['sqsQueue'] = [
-        'class' => \yii\queue\sqs\Queue::class,
+        'class' => \flip_id\yii2_queue\sqs\Queue::class,
         'url' => getenv('AWS_SQS_URL'),
         'key' => getenv('AWS_KEY'),
         'secret' => getenv('AWS_SECRET'),
@@ -130,7 +130,7 @@ if (getenv('AWS_SQS_ENABLED')) {
 if (getenv('AWS_SQS_FIFO_ENABLED')) {
     $config['bootstrap'][] = 'sqsFifoQueue';
     $config['components']['sqsFifoQueue'] = [
-        'class' => \yii\queue\sqs\Queue::class,
+        'class' => \flip_id\yii2_queue\sqs\Queue::class,
         'url' => getenv('AWS_SQS_FIFO_URL'),
         'key' => getenv('AWS_KEY'),
         'secret' => getenv('AWS_SECRET'),

@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue;
+namespace flip_id\yii2_queue;
 
 use Yii;
 use yii\base\Component;
@@ -13,8 +13,8 @@ use yii\base\InvalidArgumentException;
 use yii\base\InvalidConfigException;
 use yii\di\Instance;
 use yii\helpers\VarDumper;
-use yii\queue\serializers\PhpSerializer;
-use yii\queue\serializers\SerializerInterface;
+use flip_id\yii2_queue\serializers\PhpSerializer;
+use flip_id\yii2_queue\serializers\SerializerInterface;
 
 /**
  * Base Queue.

@@ -5,10 +5,10 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\queue\closure;
+namespace flip_id\yii2_queue\closure;
 
 use SuperClosure\Serializer;
-use yii\queue\JobInterface;
+use flip_id\yii2_queue\JobInterface;
 
 /**
  * Closure Job.

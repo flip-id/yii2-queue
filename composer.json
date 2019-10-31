@@ -1,6 +1,6 @@
 {
-    "name": "yiisoft/yii2-queue",
-    "description": "Yii2 Queue Extension which supported DB, Redis, RabbitMQ, Beanstalk, SQS and Gearman",
+    "name": "flip-id/yii2-redis-queue-enhanced",
+    "description": "Enhancement for Yii2 Redis Queue driver",
     "type": "yii2-extension",
     "keywords": ["yii", "queue", "async", "gii", "db", "redis", "rabbitmq", "beanstalk", "gearman", "sqs"],
     "license": "BSD-3-Clause",
@@ -8,6 +8,10 @@
         {
             "name": "Roman Zhuravlev",
             "email": "zhuravljov@gmail.com"
+        },
+        {
+            "name": "Luqman Sungkar",
+            "email": "loekmansungkar@gmail.com"
         }
     ],
     "support": {

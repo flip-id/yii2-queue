@@ -44,17 +44,17 @@
     },
     "autoload": {
         "psr-4": {
-            "yii\\queue\\": "src",
-            "yii\\queue\\amqp\\": "src/drivers/amqp",
-            "yii\\queue\\amqp_interop\\": "src/drivers/amqp_interop",
-            "yii\\queue\\beanstalk\\": "src/drivers/beanstalk",
-            "yii\\queue\\db\\": "src/drivers/db",
-            "yii\\queue\\file\\": "src/drivers/file",
-            "yii\\queue\\gearman\\": "src/drivers/gearman",
-            "yii\\queue\\redis\\": "src/drivers/redis",
-            "yii\\queue\\sync\\": "src/drivers/sync",
-            "yii\\queue\\sqs\\": "src/drivers/sqs",
-            "yii\\queue\\stomp\\": "src/drivers/stomp"
+            "flip_id\\yii2_queue\\": "src",
+            "flip_id\\yii2_queue\\amqp\\": "src/drivers/amqp",
+            "flip_id\\yii2_queue\\amqp_interop\\": "src/drivers/amqp_interop",
+            "flip_id\\yii2_queue\\beanstalk\\": "src/drivers/beanstalk",
+            "flip_id\\yii2_queue\\db\\": "src/drivers/db",
+            "flip_id\\yii2_queue\\file\\": "src/drivers/file",
+            "flip_id\\yii2_queue\\gearman\\": "src/drivers/gearman",
+            "flip_id\\yii2_queue\\redis\\": "src/drivers/redis",
+            "flip_id\\yii2_queue\\sync\\": "src/drivers/sync",
+            "flip_id\\yii2_queue\\sqs\\": "src/drivers/sqs",
+            "flip_id\\yii2_queue\\stomp\\": "src/drivers/stomp"
         }
     },
     "autoload-dev": {

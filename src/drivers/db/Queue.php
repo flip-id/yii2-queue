@@ -9,6 +9,7 @@ namespace flip_id\yii2_queue\db;
 
 use yii\base\Exception;
 use yii\base\InvalidArgumentException;
+use yii\base\NotSupportedException;
 use yii\db\Connection;
 use yii\db\Query;
 use yii\di\Instance;
@@ -151,8 +152,12 @@ class Queue extends CliQueue
     /**
      * @inheritdoc
      */
-    protected function pushMessage($message, $ttr, $delay, $priority)
+    protected function pushMessage($message, $ttr, $delay, $priority, $job_id)
     {
+        if($job_id !== null){
+            throw new NotSupportedException('Job id is not supported in the driver.');
+        }
+
         $this->db->createCommand()->insert($this->tableName, [
             'channel' => $this->channel,
             'job' => $message,

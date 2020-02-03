@@ -277,8 +277,11 @@ class Queue extends CliQueue
     /**
      * @inheritdoc
      */
-    protected function pushMessage($payload, $ttr, $delay, $priority)
+    protected function pushMessage($payload, $ttr, $delay, $priority, $job_id)
     {
+        if($job_id !== null){
+            throw new NotSupportedException('Job id is not supported in the driver.');
+        }
         $this->open();
         $this->setupBroker();
 

@@ -187,10 +187,14 @@ class Queue extends CliQueue
     /**
      * @inheritdoc
      */
-    protected function pushMessage($message, $ttr, $delay, $priority)
+    protected function pushMessage($message, $ttr, $delay, $priority, $job_id)
     {
         if ($priority) {
             throw new NotSupportedException('Priority is not supported in this driver');
+        }
+
+        if($job_id !== null){
+            throw new NotSupportedException('Job id is not supported in the driver.');
         }
 
         $request = [

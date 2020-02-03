@@ -13,6 +13,7 @@ use Pheanstalk\Pheanstalk;
 use Pheanstalk\PheanstalkInterface;
 use yii\base\InvalidArgumentException;
 use flip_id\yii2_queue\cli\Queue as CliQueue;
+use yii\base\NotSupportedException;
 
 /**
  * Beanstalk Queue.
@@ -118,8 +119,12 @@ class Queue extends CliQueue
     /**
      * @inheritdoc
      */
-    protected function pushMessage($message, $ttr, $delay, $priority)
+    protected function pushMessage($message, $ttr, $delay, $priority, $job_id)
     {
+        if($job_id !== null){
+            throw new NotSupportedException('Job id is not supported in the driver.');
+        }
+
         return $this->getPheanstalk()->putInTube(
             $this->tube,
             $message,

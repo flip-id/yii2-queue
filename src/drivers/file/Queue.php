@@ -225,10 +225,14 @@ class Queue extends CliQueue
     /**
      * @inheritdoc
      */
-    protected function pushMessage($message, $ttr, $delay, $priority)
+    protected function pushMessage($message, $ttr, $delay, $priority, $job_id)
     {
         if ($priority !== null) {
             throw new NotSupportedException('Job priority is not supported in the driver.');
+        }
+
+        if ($job_id !== null) {
+            throw new NotSupportedException('Job id is not supported in the driver.');
         }
 
         $this->touchIndex(function (&$data) use ($message, $ttr, $delay, &$id) {

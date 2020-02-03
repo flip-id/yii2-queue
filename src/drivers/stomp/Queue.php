@@ -211,8 +211,11 @@ class Queue extends CliQueue
      * @throws \Interop\Queue\Exception
      * @throws NotSupportedException
      */
-    protected function pushMessage($message, $ttr, $delay, $priority)
+    protected function pushMessage($message, $ttr, $delay, $priority, $job_id)
     {
+        if($job_id !== null){
+            throw new NotSupportedException('Job id is not supported in the driver.');
+        }
         $this->open();
 
         $queue = $this->createQueue($this->queueName);

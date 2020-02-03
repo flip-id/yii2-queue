@@ -11,6 +11,7 @@ use Yii;
 use yii\base\Application;
 use yii\base\InvalidArgumentException;
 use flip_id\yii2_queue\Queue as BaseQueue;
+use yii\base\NotSupportedException;
 
 /**
  * Sync Queue.
@@ -74,8 +75,12 @@ class Queue extends BaseQueue
     /**
      * @inheritdoc
      */
-    protected function pushMessage($message, $ttr, $delay, $priority)
+    protected function pushMessage($message, $ttr, $delay, $priority, $job_id)
     {
+        if($job_id !== null){
+            throw new NotSupportedException('Job id is not supported in the driver.');
+        }
+
         array_push($this->payloads, [$ttr, $message]);
         return ++$this->pushedId;
     }

@@ -151,7 +151,7 @@ abstract class Queue extends Component
      * @param JobInterface|mixed $job
      * @return string|null id of a job message
      */
-    public function push($job)
+    public function push($job, $job_id = null)
     {
         $event = new PushEvent([
             'job' => $job,
@@ -193,7 +193,7 @@ abstract class Queue extends Component
         }
 
         $message = $this->serializer->serialize($event->job);
-        $event->id = $this->pushMessage($message, $event->ttr, $event->delay, $event->priority);
+        $event->id = $this->pushMessage($message, $event->ttr, $event->delay, $event->priority, $job_id);
         $this->trigger(self::EVENT_AFTER_PUSH, $event);
 
         return $event->id;
@@ -206,7 +206,7 @@ abstract class Queue extends Component
      * @param mixed $priority
      * @return string id of a job message
      */
-    abstract protected function pushMessage($message, $ttr, $delay, $priority);
+    abstract protected function pushMessage($message, $ttr, $delay, $priority, $job_id);
 
     /**
      * Uses for CLI drivers and gets process ID of a worker.

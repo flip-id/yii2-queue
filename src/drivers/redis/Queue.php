@@ -181,13 +181,20 @@ class Queue extends CliQueue
     /**
      * @inheritdoc
      */
-    protected function pushMessage($message, $ttr, $delay, $priority)
+    protected function pushMessage($message, $ttr, $delay, $priority, $job_id)
     {
         if ($priority !== null) {
             throw new NotSupportedException('Job priority is not supported in the driver.');
         }
 
-        $id = uniqid("{$this->channel}.", true);
+        if($job_id !== null){
+            $id = "{$this->channel}.{$job_id}";
+            if($this->redis->hexists("$this->channel.messages", $id)){
+                return $id;
+            }
+        }else{
+            $id = uniqid("{$this->channel}.", true);
+        }
         $this->redis->incr("{$this->channel}.total");
         $this->redis->hset("$this->channel.messages", $id, "$ttr;$message");
         if (!$delay) {

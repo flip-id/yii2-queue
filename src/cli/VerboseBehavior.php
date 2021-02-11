@@ -21,6 +21,11 @@ use flip_id\yii2_queue\JobInterface;
 class VerboseBehavior extends Behavior
 {
     /**
+     * @event PushEvent
+     */
+    const EVENT_AFTER_EXEC_VERBOSE = 'verbose.afterExec';
+
+    /**
      * @var Queue
      */
     public $owner;
@@ -78,6 +83,17 @@ class VerboseBehavior extends Behavior
         $duration = number_format(round(microtime(true) - $this->jobStartedAt, 3), 3);
         $this->command->stdout(" ($duration s)", Console::FG_YELLOW);
         $this->command->stdout(PHP_EOL);
+
+        Yii::$app->trigger(self::EVENT_AFTER_EXEC_VERBOSE, (
+            new ExecEvent([
+                'id' => $event->id,
+                'job' => $event->job,
+                'ttr' => $event->ttr,
+                'attempt' => $event->attempt,
+                'error' => $event->error,
+                'duration' => $duration
+            ]
+        ));
     }
 
     /**

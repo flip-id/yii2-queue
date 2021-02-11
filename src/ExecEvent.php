@@ -39,4 +39,11 @@ class ExecEvent extends JobEvent
      * @since 2.1.1
      */
     public $retry;
+    /**
+     * @var null|int
+     * @see VerboseBehavior::EVENT_AFTER_EXEC_VERBOSE
+     * @since 2.3.4
+     */
+    public $duration;
+
 }

@@ -84,7 +84,7 @@ class VerboseBehavior extends Behavior
         $this->command->stdout(" ($duration s)", Console::FG_YELLOW);
         $this->command->stdout(PHP_EOL);
 
-        Yii::$app->trigger(self::EVENT_AFTER_EXEC_VERBOSE, (
+        \Yii::$app->trigger(self::EVENT_AFTER_EXEC_VERBOSE, (
             new ExecEvent([
                 'id' => $event->id,
                 'job' => $event->job,
@@ -92,7 +92,7 @@ class VerboseBehavior extends Behavior
                 'attempt' => $event->attempt,
                 'error' => $event->error,
                 'duration' => $duration
-            ]
+            ])
         ));
     }
 
